@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="iniciar">Iniciar</string>
+    <string name="insira_seu_nome">Insira seu nome</string>
+    <string name="por_favor_insira_seu_nome">Por favor insira seu nome!</string>
+    <string name="bem_vindo">Bem-Vindo</string>
+    <string name="adivinhe_a_bandeira">Adivinhe a Bandeira!</string>
+    <string name="a_qual_pa_s_pertence_essa_bandeira">A qual país pertence essa bandeira?</string>
+</resources>
