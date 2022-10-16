@@ -6,4 +6,7 @@
     <string name="bem_vindo">Bem-Vindo</string>
     <string name="adivinhe_a_bandeira">Adivinhe a Bandeira!</string>
     <string name="a_qual_pa_s_pertence_essa_bandeira">A qual país pertence essa bandeira?</string>
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
+
 </resources>

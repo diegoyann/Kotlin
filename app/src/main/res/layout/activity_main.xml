@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -9,81 +10,99 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtView01"
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/adivinhe_a_bandeira"
-        android:layout_marginBottom="30sp"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu" />
 
-      />
-    <androidx.cardview.widget.CardView
+    <include layout="@layout/content_main" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@android:color/white"
-        app:cardCornerRadius="8dp"
-        android:elevation="5dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
         >
-        <LinearLayout
+        <TextView
+            android:id="@+id/txtView01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/bem_vindo"
-                android:textColor="#363A43"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/por_favor_insira_seu_nome"
-                android:textColor="#7a8089"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+            android:text="@string/adivinhe_a_bandeira"
+            android:layout_marginBottom="30sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
 
-            <com.google.android.material.textfield.TextInputLayout
+            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="8dp"
+            android:elevation="5dp"
+            >
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                >
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_name"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/insira_seu_nome"
-                    android:textColor="#363a43"
-                    android:textColorHint="#7a8089"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:gravity="center"
+                    android:text="@string/bem_vindo"
+                    android:textColor="#363A43"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/por_favor_insira_seu_nome"
+                    android:textColor="#7a8089"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    >
 
-            <Button
-                android:id="@+id/btn_start"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/black"
-                android:text="@string/iniciar"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"></Button>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/insira_seu_nome"
+                        android:textColor="#363a43"
+                        android:textColorHint="#7a8089"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/black"
+                    android:text="@string/iniciar"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></Button>
 
 
-        </LinearLayout>
+            </LinearLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
+

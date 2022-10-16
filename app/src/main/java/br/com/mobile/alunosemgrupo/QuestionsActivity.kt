@@ -98,7 +98,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         opcoes.add(2,optionThree)
         opcoes.add(3,optionFour)
         for (option in opcoes){
-            option.setTextColor(parseColor("#7A8089"))
+            option.setTextColor(parseColor("#000000"))
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(this,R.drawable.default_option_border_bg)
         }

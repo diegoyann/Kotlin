@@ -10,33 +10,39 @@
     android:padding="20dp"
     tools:context=".MainActivity"
     >
+
     <TextView
         android:id="@+id/tv_resultado"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="66dp"
         android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
         android:text="Resultado"
-        android:gravity="center"
         android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/iv_trophy"
-        android:layout_width="wrap_content"
-        android:layout_height="385dp"
+        android:layout_width="338dp"
+        android:layout_height="186dp"
+        android:layout_gravity="center"
         android:contentDescription="Imagem"
-        android:src="@drawable/ic_trophy" />
+        android:src="@drawable/ic_goldenmedal"
+        app:srcCompat="@drawable/ic_goldenmedal"
+        tools:srcCompat="@drawable/ic_goldenmedal" />
+
     <TextView
         android:id="@+id/tv_parabens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Parabens, voce concluiu!"
+        android:text="Parabéns!!!"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
@@ -44,9 +50,20 @@
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        tools:text="Usuario"/>
+        tools:text="Usuario" />
+    <TextView
+        android:id="@+id/tv_parabens2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Você concluiu o teste com sucesso!"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
 
     <TextView
         android:id="@+id/tv_score"
@@ -65,6 +82,17 @@
         android:layout_marginTop="10dp"
         android:background="@android:color/black"
         android:text="Finalizar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_ranking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black"
+        android:text="Vizualizar Ranking"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />

@@ -17,6 +17,7 @@ class  FinalResultActivity : AppCompatActivity() {
         val tvName = findViewById<TextView>(R.id.tv_name)
         val tvScore = findViewById<TextView>(R.id.tv_score)
         val btnFinalizar = findViewById<Button>(R.id.btn_finalizar)
+        val btnRanking = findViewById<Button>(R.id.btn_ranking)
         tvName.text = username
 
         val totalQuestions = intent.getIntExtra(Constants.total_questions,0)
@@ -24,8 +25,13 @@ class  FinalResultActivity : AppCompatActivity() {
 
         tvScore.text = "Voce acertou $correctAnswers de $totalQuestions"
 
-        btnFinalizar.setOnClickListener(){
+        btnFinalizar.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
+
+        btnRanking.setOnClickListener {
+            startActivity(Intent(this,RankingActivity::class.java))
             finish()
         }
 

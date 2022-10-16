@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_ranking"
+        android:icon="@android:drawable/btn_star"
+        android:title="Ranking" />
+    <item
+        android:id="@+id/nav_about"
+        android:title="Sobre" />
+</menu>
