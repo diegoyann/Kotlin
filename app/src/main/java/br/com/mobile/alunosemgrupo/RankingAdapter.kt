@@ -9,15 +9,20 @@ import android.graphics.drawable.shapes.OvalShape
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.RecyclerView
-import br.com.mobile.alunosemgrupo.model.Ranking
+import br.com.mobile.alunosemgrupo.Ranking
 import kotlinx.android.synthetic.main.ranking_item.view.*
+import org.w3c.dom.Text
 
 
-class RankingAdapter (val ranking : MutableList<Ranking>) : RecyclerView.Adapter<RankingAdapter.RankingViewHolder>() {
+class RankingAdapter (val ranking : List<RankingBuilder>) : RecyclerView.Adapter<RankingAdapter.RankingViewHolder>() {
+
 
     override fun getItemCount(): Int = ranking.size
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RankingViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.ranking_item,parent,false )
@@ -25,9 +30,15 @@ class RankingAdapter (val ranking : MutableList<Ranking>) : RecyclerView.Adapter
     }
 
     override fun onBindViewHolder(holder: RankingViewHolder, position: Int) {
-        holder.bind(ranking[position])
+
+        val context = holder.itemView.context
+        val place = ranking[position]
+
+
+
     }
-    inner class  RankingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+   class  RankingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
         fun bind(ranking: Ranking) {
             with(ranking){
                 //val hash = user.hashCode()

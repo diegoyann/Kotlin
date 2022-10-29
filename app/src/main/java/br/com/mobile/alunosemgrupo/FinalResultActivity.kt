@@ -26,16 +26,21 @@ class  FinalResultActivity : AppCompatActivity() {
         tvScore.text = "Voce acertou $correctAnswers de $totalQuestions"
 
         btnFinalizar.setOnClickListener {
+
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }
 
         btnRanking.setOnClickListener {
             startActivity(Intent(this,RankingActivity::class.java))
-            finish()
+            fun updateTask(ranking: RankingBuilder) {
+                val place = RankingBuilder()
+                place.user = tvName.text.toString()
+                place.position = tvScore.text.toString()
+                RankingService.save(ranking)
+                finish()
         }
-
-
+        }
 
     }
 }
