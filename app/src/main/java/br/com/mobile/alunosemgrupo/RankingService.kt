@@ -1,14 +1,10 @@
 package br.com.mobile.alunosemgrupo
 
-import br.com.mobile.alunosemgrupo.RankingService.parserJson
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 object RankingService {
-
-
-    val host = "https://jsonkeeper.com/b/Y7G7"
-    val TAG = "WS_FlagAPP"
+    val host = "https://www.jsonkeeper.com/b/DS51"
 
     fun getRanking(): List<RankingBuilder>{
         var place = ArrayList<RankingBuilder>()
@@ -16,7 +12,7 @@ object RankingService {
         if (AndroidUtils.isInternetDisponivel()){
         val url = "$host"
             val json = HttpHelper.get(url)
-            place = parserJson(json)
+            place = parserJson<ArrayList<RankingBuilder>>(json)
 
             for (p in place) {
                 saveOffline(p)

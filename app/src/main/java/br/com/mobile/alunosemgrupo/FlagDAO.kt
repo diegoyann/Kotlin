@@ -7,7 +7,7 @@ import androidx.room.Query
 
 @Dao
 interface FlagDAO {
-    @Query("SELECT * FROM ranking")
+    @Query("SELECT * FROM ranking WHERE id = :id")
     fun getById(id: Long) : RankingBuilder?
 
     @Query("SELECT * FROM ranking")
